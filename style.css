@@ -1,97 +1,130 @@
-/* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    line-height: 1.6;
-    background-color: #f9f9f9;
+    background: #f0f8ff;
+    color: #333;
 }
 
-/* Header */
 header {
-    background-color: #004080;
+    background-color: #ff6347;
     color: white;
-    padding: 20px 0;
+    padding: 15px 0;
     text-align: center;
 }
 
-header nav ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+header h1 {
+    margin: 0;
+    font-size: 2.2em;
 }
 
-header nav ul li a {
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 10px 0 0 0;
+    margin: 0;
+}
+
+nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
+    padding: 5px 10px;
 }
 
-header nav ul li a:hover {
-    text-decoration: underline;
+nav ul li a.active,
+nav ul li a:hover {
+    background-color: #ffa07a;
+    border-radius: 5px;
 }
 
-/* Sections */
-section {
-    padding: 40px 20px;
+.hero {
+    background: url('images/burj_khalifa.jpg') center/cover no-repeat;
+    color: white;
+    padding: 120px 20px;
     text-align: center;
 }
 
-section h2 {
-    color: #004080;
-    margin-bottom: 20px;
+.places, .about-section, .contact-section {
+    padding: 50px 20px;
+    text-align: center;
 }
 
-/* Attractions */
-.attractions-container {
+.place-cards {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 25px;
 }
 
-.attraction {
+.card {
     background-color: white;
-    border-radius: 8px;
-    padding: 20px;
-    width: 300px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 15px;
+    width: 320px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    border-radius: 12px;
+    transition: transform 0.3s;
 }
 
-.attraction img {
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
     width: 100%;
-    border-radius: 8px;
+    border-radius: 12px;
 }
 
-/* Gallery */
-.gallery {
+.gallery-container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
+    padding: 20px;
 }
 
-.gallery figure {
-    margin: 0;
-    width: 250px;
+.gallery-img {
+    width: 300px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
 
-.gallery img {
-    width: 100%;
+.contact-section form {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-section input,
+.contact-section textarea {
+    padding: 12px;
     border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1em;
 }
 
-figcaption {
-    margin-top: 5px;
-    font-weight: bold;
+.contact-section button {
+    padding: 12px;
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
 }
 
-/* Footer */
+.contact-section button:hover {
+    background-color: #ff4500;
+}
+
 footer {
-    background-color: #004080;
+    background-color: #ff6347;
     color: white;
     text-align: center;
-    padding: 20px 0;
+    padding: 15px 0;
+    margin-top: 30px;
 }
